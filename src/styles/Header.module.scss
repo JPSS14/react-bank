@@ -1,0 +1,17 @@
+@import "colors";
+
+.mainHeader{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    background: #4A5159;
+    align-items: center;
+    padding: 10px 0px;
+    font-size: 1.3em;
+
+    h1{
+        color: $blue;
+        margin: 0 auto;
+    }
+}
+
