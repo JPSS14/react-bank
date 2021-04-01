@@ -1,0 +1,13 @@
+.mainHeader{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    background: #4A5159;
+    align-items: center;
+    padding: 10px 0px;
+    font-size: 1.3em;
+}
+.mainHeader h1{
+    color: #54daf8;
+    margin: 0 auto;
+}
