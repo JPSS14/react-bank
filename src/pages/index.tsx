@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { Header } from '../components/Header';
-import { Saldo } from '../components/Saldo';
+import { Balance } from '../components/Balance';
+import { Profile } from '../components/Profile';
+import style from '../styles/main.module.scss';
 
 export default function Home() {
   return (
@@ -9,8 +11,11 @@ export default function Home() {
         <title>React Bank</title>
       </Head>
       <Header />
-      <main>
-        <Saldo />
+      <main className={style.main}>
+        <div className={style.mainHeader}>
+          <Balance />
+          <Profile />
+        </div>
       </main>
     </>
   );

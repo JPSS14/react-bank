@@ -1,0 +1,15 @@
+@import "colors";
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background: $dark;
+
+    .mainHeader{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 80%;
+        margin: 10px auto;
+        justify-content: space-between;
+    }
+}
