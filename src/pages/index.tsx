@@ -3,6 +3,7 @@ import { Header } from '../components/Header';
 import { Balance } from '../components/Balance';
 import { Profile } from '../components/Profile';
 import style from '../styles/main.module.scss';
+import { Services } from '../components/Services';
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
         <div className={style.mainHeader}>
           <Balance />
           <Profile />
+        </div>
+        <div className={style.mainServices}>
+          <Services />
         </div>
       </main>
     </>

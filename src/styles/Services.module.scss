@@ -1,0 +1,11 @@
+@import "colors";
+.mainPix{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 31%;
+    background: $main;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 1px $blue;
+    color: $blue;
+}
