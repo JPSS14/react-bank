@@ -1,0 +1,52 @@
+@import "colors";
+.mainPlansBox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: space-between;
+    background: $main;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 1px $blue;
+    color: $blue;
+
+    .mainPlansHeader{
+        flex-basis: 10%;
+    }
+
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-basis: 70%;
+    }
+
+    .mainPlansSection{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 90%;
+        justify-content: flex-end;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+
+    .mainPlansHelp{
+        flex-basis: 10%;
+        background: $dark;
+        padding: 7px 20px;
+        border: solid 1px #fff;
+        border-radius: 20px;
+        color: #fff;
+    }
+
+    .mainPlansArticle{
+        flex-basis: 10%;
+        background: $dark;
+        padding: 7px 20px;
+        border: solid 1px $blue;
+        border-radius: 20px;
+        margin: 0 5px;
+    }
+}

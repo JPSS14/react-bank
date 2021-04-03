@@ -20,4 +20,12 @@
         margin: 20px auto;
         justify-content: space-between;
     }
+
+    .mainPlans{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 80%;
+        margin: 20px auto;
+        justify-content: space-between;
+    }
 }
