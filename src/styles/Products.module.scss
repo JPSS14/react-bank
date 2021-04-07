@@ -15,5 +15,22 @@
         font-size: 1.3em;
     }
 
+    .mainProductsArticle{
+        display: flex;
+        flex-basis: 24%;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 20px 0;
+        border: solid 1px $blue;
+        border-radius: 20px;
+        overflow: hidden;
 
+        img{
+            width: 100%;
+        }
+
+        h2{
+            padding: 15px 0;
+        }
+    }
 }
