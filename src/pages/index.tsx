@@ -5,6 +5,7 @@ import { Profile } from '../components/Profile';
 import style from '../styles/main.module.scss';
 import { Services } from '../components/Services';
 import { PlansBox } from '../components/PlansBox';
+import { ProductsBox } from '../components/ProductsBox';
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
         </div>
         <div className={style.mainPlans}>
           <PlansBox />
+        </div>
+        <div className={style.mainProductsBox}>
+          <ProductsBox/>
         </div>
       </main>
     </>

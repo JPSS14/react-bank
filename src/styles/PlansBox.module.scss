@@ -33,12 +33,16 @@
     }
 
     .mainPlansHelp{
-        flex-basis: 10%;
+        flex-basis: 7%;
         background: $dark;
-        padding: 7px 20px;
+        padding: 7px 10px;
         border: solid 1px #fff;
         border-radius: 20px;
         color: #fff;
+
+        h2{
+            text-align: center;
+        }
     }
 
     .mainPlansArticle{

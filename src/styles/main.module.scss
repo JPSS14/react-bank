@@ -28,4 +28,12 @@
         margin: 20px auto;
         justify-content: space-between;
     }
+
+    .mainProductsBox{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 80%;
+        margin: 20px auto;
+        justify-content: space-between;
+    }
 }

@@ -12,7 +12,7 @@ export function PlansBox() {
                 <section className={style.mainPlansSection}>
                     <article className={style.mainPlansHelp}>
                         <header>
-                            <h2>Ajuda</h2>
+                            <h2>?</h2>
                         </header>
                     </article>
                     <article className={style.mainPlansArticle}>
