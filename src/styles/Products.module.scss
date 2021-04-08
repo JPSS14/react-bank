@@ -33,4 +33,10 @@
             padding: 15px 0;
         }
     }
+    
+@media (max-width: 967px){
+    .mainProductsArticle{
+        flex-basis: 48%;
+    }
+}
 }
