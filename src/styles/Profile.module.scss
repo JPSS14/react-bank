@@ -14,3 +14,11 @@
         color: #fff;
     }
 }
+
+@media (max-width: 646px){
+    .mainProfile{
+        p{
+            font-size: 1.1em;
+        }
+    }
+}

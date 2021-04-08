@@ -19,3 +19,14 @@
         font-size: 1.6em;
     }
 }
+
+@media (max-width: 646px){
+    .mainBalance{
+        h1{
+            font-size: 1.3em;
+        }
+        p{
+            font-size: 1.3em;
+        }
+    }
+}
