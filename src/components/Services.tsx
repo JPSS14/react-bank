@@ -12,6 +12,15 @@ export function Services() {
             <div className={style.mainPix}>
                 <h1>Inserir Saldo</h1>
             </div>
+            <div className={style.mainPix}>
+                <h1>Empréstimo</h1>
+            </div>
+            <div className={style.mainPix}>
+                <h1>Crédito</h1>
+            </div>
+            <div className={style.mainPix}>
+                <h1>Dívidas</h1>
+            </div>
         </>
     );
 }
