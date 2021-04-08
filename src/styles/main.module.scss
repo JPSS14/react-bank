@@ -37,4 +37,11 @@
         margin-bottom: 70px;
         justify-content: space-between;
     }
+
+    @media (max-width: 646px){
+        .mainServices{
+            flex-basis: 90%;
+        }
+    }
 }
+

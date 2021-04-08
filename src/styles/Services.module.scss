@@ -10,3 +10,15 @@
     color: $blue;
     margin-bottom: 10px;
 }
+
+@media (max-width: 967px){
+    .mainPix{
+        flex-basis: 49%;
+    }
+}
+
+@media (max-width: 646px){
+    .mainPix{
+        font-size: 0.710em;
+    }
+}
