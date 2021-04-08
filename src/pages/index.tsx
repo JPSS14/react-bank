@@ -6,6 +6,7 @@ import style from '../styles/main.module.scss';
 import { Services } from '../components/Services';
 import { PlansBox } from '../components/PlansBox';
 import { ProductsBox } from '../components/ProductsBox';
+import { Footer } from '../components/Footer';
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
           <ProductsBox/>
         </div>
       </main>
+      <Footer/>
     </>
   );
 }
