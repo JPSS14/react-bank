@@ -54,3 +54,24 @@
         margin: 0 5px;
     }
 }
+
+.mainPlansBoxMobile{
+    display: none;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: space-between;
+    background: $main;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 1px $blue;
+    color: $blue;
+}
+
+@media (max-width: 850px){
+    .mainPlansBoxMobile{
+        display: flex;
+    }
+    .mainPlansBox{
+        display: none;
+    }
+}

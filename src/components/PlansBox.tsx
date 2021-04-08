@@ -2,6 +2,7 @@ import style from '../styles/PlansBox.module.scss';
 
 export function PlansBox() {
     return (
+        <>
         <div className={style.mainPlansBox}>
             <div className={style.mainPlansHeader}>
                 <header>
@@ -33,5 +34,15 @@ export function PlansBox() {
                 </section>
             </div>
         </div>
+
+
+        <div className={style.mainPlansBoxMobile}>
+            <div className={style.mainPlansHeader}>
+                <header>
+                    <h1>Planos</h1>
+                </header>
+            </div>
+        </div>
+        </>
     );
 }
