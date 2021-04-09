@@ -3,30 +3,56 @@
 .mainBalance{
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 47%;
+    flex-basis: 60%;
     align-items: center;
     margin-top: 30px;
     border: solid 3px #333;
     color: $blue;
-    padding: 20px;
     border-radius: 20px;
+    overflow: hidden;
+
+    header{
+        margin: 15px 20px;
+    }
 
     h1{
         font-size: 1.6em;
-        margin-right: 10px;
     }
     p{
         font-size: 1.6em;
+        margin-left: 10px;
+    }
+
+    .mainBalanceShow{
+        flex-basis: 100%;
+        background: $main;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    .mainBalanceShow:hover{
+        background: $blue;
+        color: $dark;
+        cursor: pointer;
     }
 }
 
 @media (max-width: 646px){
     .mainBalance{
+        flex-basis: 100%;
+        margin: 0px auto;
         h1{
             font-size: 1.3em;
         }
         p{
             font-size: 1.3em;
         }
+    }
+}
+
+@media (max-width: 967px){
+    .mainBalance{
+        flex-basis: 100%;
+        margin: 0px auto;
     }
 }

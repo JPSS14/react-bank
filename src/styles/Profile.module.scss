@@ -1,7 +1,7 @@
 .mainProfile{
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 47%;
+    flex-basis: 40%;
     margin-top: 30px;
     padding: 20px;
     border-radius: 20px;
@@ -18,7 +18,19 @@
 @media (max-width: 646px){
     .mainProfile{
         p{
-            font-size: 1.1em;
+            font-size: 1.2em;
+        }
+    }
+}
+
+@media (max-width: 967px){
+    .mainProfile{
+        flex-basis: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        p{
+            flex-basis: 100%;
+            text-align: center;
         }
     }
 }

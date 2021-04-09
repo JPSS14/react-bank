@@ -9,6 +9,9 @@ export function Balance(){
                 <div>
                     <p>R$ 2.500,00</p>
                 </div>
+                <div className={style.mainBalanceShow}>
+                    Mostrar Saldo
+                </div>
             </div>
     );
 }
