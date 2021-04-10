@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     margin: 0 auto;
     background: $dark;
+    justify-content: center;
 
     .mainHeader{
         display: flex;
@@ -36,6 +37,26 @@
         margin: 20px auto;
         margin-bottom: 70px;
         justify-content: space-between;
+    }
+
+    .mainFull90{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 90%;
+        justify-content: center;
+    }
+
+    .mainInsertBalance{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 55%;
+        justify-content: center;
+    }
+
+    @media (max-width: 967px){
+        .mainInsertBalance{
+            flex-basis: 90%;
+        }
     }
 
     @media (max-width: 646px){

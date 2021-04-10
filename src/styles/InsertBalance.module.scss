@@ -1,0 +1,68 @@
+@import "colors";
+.insertBalance{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    margin: 50px 0px;
+    color: $blue;
+    justify-content: center;
+
+    header{
+        background: $main;
+        flex-basis: 100%;
+        text-align: center;
+        padding: 20px;
+        border: solid 1px $blue;
+        border-radius: 20px;
+    }
+
+    .insertBalanceContent{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        background: $main;
+        flex-basis: 100%;
+        border: solid 1px $blue;
+        border-radius: 20px;
+        overflow: hidden;
+
+        .balance{
+            padding: 50px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-basis: 100%;
+            align-items: center;
+
+            input{
+                border: solid 3px $blue;
+                background: $main;
+                font-size: 1.5em;
+                border-radius: 20px;
+                padding: 10px;
+                color: $blue;
+                flex-basis: 85%;
+            }
+            p{
+                flex-basis: 15%;
+                font-size: 1.5em;
+            }
+        }
+
+        .insertButton{
+            flex-basis: 100%;
+            background: $blue;
+            padding: 10px;
+            color: $dark;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .insertButton:hover{
+            color: $dark;
+            background: #fff;
+        }
+    }
+}
