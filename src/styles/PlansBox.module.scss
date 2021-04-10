@@ -44,6 +44,12 @@
             text-align: center;
         }
     }
+    .mainPlansHelp:hover{
+        background: $blue;
+        color: $dark;
+        border-color: $dark;
+        cursor: pointer;
+    }
 
     .mainPlansArticle{
         flex-basis: 10%;
@@ -52,6 +58,13 @@
         border: solid 1px $blue;
         border-radius: 20px;
         margin: 0 5px;
+        color: $blue;
+    }
+    .mainPlansArticle:hover{
+        color: #fff;
+        background: $blue;
+        border-color: #fff;
+        cursor: pointer;
     }
 }
 
@@ -65,6 +78,12 @@
     border-radius: 20px;
     border: solid 1px $blue;
     color: $blue;
+}
+
+.mainPlansBoxMobile:hover{
+    color: #fff;
+    border-color: #fff;
+    cursor: pointer;
 }
 
 @media (max-width: 850px){
