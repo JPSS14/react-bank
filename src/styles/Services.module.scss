@@ -1,5 +1,5 @@
 @import "colors";
-.mainPix{
+.mainService{
     display: flex;
     flex-wrap: wrap;
     flex-basis: 31%;
@@ -11,14 +11,20 @@
     margin-bottom: 10px;
 }
 
+.mainService:hover{
+    border-color: #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
 @media (max-width: 967px){
-    .mainPix{
+    .mainService{
         flex-basis: 49%;
     }
 }
 
 @media (max-width: 646px){
-    .mainPix{
+    .mainService{
         font-size: 0.710em;
     }
 }
