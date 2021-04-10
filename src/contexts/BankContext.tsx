@@ -7,6 +7,7 @@ interface User{
 
 interface BankContextData{
     balance: number;
+    updateBalance: (value:number) => void;
 }
 
 export const BankContext = createContext({} as BankContextData);
@@ -19,10 +20,15 @@ export function BankProvider({children}:BankProviderProps){
 
     const [balance, setBalance] = useState(0);
 
+    function updateBalance(value:number){
+        setBalance(balance+value);
+    }
+
     return(
         <BankContext.Provider
             value={{
-                balance
+                balance,
+                updateBalance
             }}
         >
             {children}
