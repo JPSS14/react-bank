@@ -24,6 +24,7 @@
         border: solid 1px $blue;
         border-radius: 20px;
         overflow: hidden;
+        color: $blue;
 
         img{
             width: 100%;
@@ -32,6 +33,12 @@
         h2{
             padding: 15px 0;
         }
+    }
+
+    .mainProductsArticle:hover{
+        border-color: #fff;
+        color: #fff;
+        cursor: pointer;
     }
     
 @media (max-width: 967px){
