@@ -10,7 +10,9 @@ const [value, setValue] = useState('');
 
     function insert() {
         const valor = parseFloat(value);
-        updateBalance(valor);
+        if(valor>0){
+            updateBalance(valor);
+        }      
     }
     return (
         <div className={style.insertBalance}>
@@ -20,7 +22,7 @@ const [value, setValue] = useState('');
             <div className={style.insertBalanceContent}>
                 <div className={style.balance}>
                     <p>R$</p>
-                    <input type="text" value={value} onChange={(e) => setValue(e.target.value)}></input>
+                    <input type="number" value={value} onChange={(e) => setValue(e.target.value)} id="balance"></input>
                 </div>
                 <div className={style.insertButton} onClick={insert}>
                     <p>Inserir</p>

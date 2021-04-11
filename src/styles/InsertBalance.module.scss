@@ -44,6 +44,9 @@
                 color: $blue;
                 flex-basis: 85%;
             }
+            input:invalid{
+                border-color: red;
+            }
             p{
                 flex-basis: 15%;
                 font-size: 1.5em;
