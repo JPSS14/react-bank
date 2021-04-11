@@ -6,14 +6,15 @@
     margin: 50px 0px;
     color: $blue;
     justify-content: center;
+    background: $main;
+    border: solid 1px $blue;
+    border-radius: 20px;
 
     header{
-        background: $main;
         flex-basis: 100%;
         text-align: center;
         padding: 20px;
-        border: solid 1px $blue;
-        border-radius: 20px;
+        border-bottom: dashed 3px $dark;
     }
 
     .insertBalanceContent{
@@ -21,9 +22,7 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 20px;
-        background: $main;
         flex-basis: 100%;
-        border: solid 1px $blue;
         border-radius: 20px;
         overflow: hidden;
 

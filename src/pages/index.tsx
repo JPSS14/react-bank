@@ -7,8 +7,21 @@ import { Services } from '../components/Services';
 import { PlansBox } from '../components/PlansBox';
 import { ProductsBox } from '../components/ProductsBox';
 import { Footer } from '../components/Footer';
+import { useState } from 'react';
+import {useRouter} from 'next/router';
 
 export default function Home() {
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  const router = useRouter();
+
+  function login(){
+    if((name != "") && (password != "")){
+      router.push("/conta");
+      console.log("nome ",name,"senha: ", password);
+    }
+  }
+
   return (
     <>
       <Head>
@@ -16,21 +29,21 @@ export default function Home() {
       </Head>
       <Header />
       <main className={style.main}>
-        <div className={style.mainHeader}>
-          <Balance />
-          <Profile />
-        </div>
-        <div className={style.mainServices}>
-          <Services />
-        </div>
-        <div className={style.mainPlans}>
-          <PlansBox />
-        </div>
-        <div className={style.mainProductsBox}>
-          <ProductsBox/>
+        <div className={style.mainLogin}>
+          <header>
+            <h1>Login</h1>
+          </header>
+          <div>
+            <p>Cadastre-se no React Bank!</p>
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)}></input>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+
+                <button onClick={login}>Entrar</button>
+
+          </div>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }

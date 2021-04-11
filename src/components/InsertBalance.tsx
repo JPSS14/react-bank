@@ -11,7 +11,7 @@ const [value, setValue] = useState('');
     function insert() {
         const valor = parseFloat(value);
         if(valor>0){
-            updateBalance(valor);
+            updateBalance(parseFloat(valor.toFixed(2)));
         }      
     }
     return (
