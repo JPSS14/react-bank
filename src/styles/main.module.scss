@@ -6,6 +6,68 @@
     background: $dark;
     justify-content: center;
 
+    .mainLogin{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        margin: 10px auto;
+        justify-content: center;
+        background: $main;
+        border-radius: 20px;
+        border: solid 1px $blue;
+        margin: 80px 0;
+        padding: 0 10px;
+
+        header{
+            flex-basis: 100%;
+            text-align: center;
+            color: $blue;
+            margin-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: dashed 3px $dark;
+        }
+        .loginBox{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-basis: 50%;
+
+            p{
+                flex-basis: 100%;
+                font-size: 1.4em;
+                text-align: center;
+                color: $blue;
+                margin: 30px 0;
+            }
+            input{
+                border: solid 2px $blue;
+                background: $main;
+                flex-basis: 100%;
+                margin-bottom: 20px;
+                padding: 10px;
+                border-radius: 20px;
+                color: $blue;
+                font-size: 1.2em;
+            }
+            button{
+                background: $blue;
+                flex-basis: 100%;
+                margin-bottom: 30px;
+                padding: 10px;
+                border: solid 2px $dark;
+                color: $dark;
+                border-radius: 20px;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+            button:hover{
+                border-color: #fff;
+                color: #fff;
+            }
+        }
+
+    }
+
     .mainHeader{
         display: flex;
         flex-wrap: wrap;
