@@ -2,7 +2,6 @@
 .main{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
     background: $dark;
     justify-content: center;
 
@@ -113,6 +112,30 @@
         flex-wrap: wrap;
         flex-basis: 55%;
         justify-content: center;
+    }
+
+    .mainOps{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 90%;
+        justify-content: center;
+        margin: 205px 0;
+
+        header{
+            flex-basis: 100%;
+            color: $blue;
+            text-align: center;
+            font-size: 1.4em;
+        }
+
+        p{
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+        a{
+            color: $blue;
+        }
     }
 
     @media (max-width: 967px){
