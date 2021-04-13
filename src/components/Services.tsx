@@ -4,7 +4,7 @@ import Link from 'next/link';
 export function Services() {
     return (
         <>
-            <Link href="/pix">
+            <Link href="/lista-de-amigos">
                 <a className={style.mainService}>
                     <div>
                         <h1>Pix</h1>

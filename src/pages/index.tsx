@@ -24,7 +24,6 @@ export default function Home() {
       <Head>
         <title>React Bank</title>
       </Head>
-      <Header />
       <main className={style.main}>
         <div className={style.mainLogin}>
           <header>
@@ -38,7 +37,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

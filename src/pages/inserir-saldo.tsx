@@ -1,8 +1,6 @@
 import style from '../styles/main.module.scss';
-import { Header } from '../components/Header';
 import { InsertBalance } from '../components/InsertBalance';
 import { Balance } from '../components/Balance';
-import { Footer } from '../components/Footer';
 import { useContext } from 'react';
 import { BankContext } from '../contexts/BankContext';
 import { Ops } from '../components/Ops';
@@ -19,7 +17,6 @@ export default function iniserirSaldo() {
                 ) :
                 (
                     <>
-                        <Header />
                         <main className={style.main}>
                             <header className={style.mainFull90}>
                                 <Balance />
@@ -28,7 +25,6 @@ export default function iniserirSaldo() {
                                 <InsertBalance />
                             </div>
                         </main>
-                        <Footer />
                     </>
                 )
             }

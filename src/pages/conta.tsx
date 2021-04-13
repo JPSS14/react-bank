@@ -14,7 +14,7 @@ import { Ops } from '../components/Ops';
 export default function Home() {
     const { name, password } = useContext(BankContext);
     const vazio = "";
-    
+
     return (
 
         <>
@@ -27,7 +27,6 @@ export default function Home() {
                         <Head>
                             <title>React Bank</title>
                         </Head>
-                        <Header />
                         <main className={style.main}>
                             <div className={style.mainHeader}>
                                 <Balance />
@@ -43,7 +42,6 @@ export default function Home() {
                                 <ProductsBox />
                             </div>
                         </main>
-                        <Footer />
                     </>
                 )}
         </>
