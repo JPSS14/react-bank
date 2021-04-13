@@ -9,14 +9,12 @@ import { ProductsBox } from '../components/ProductsBox';
 import { Footer } from '../components/Footer';
 import { useContext } from 'react';
 import { BankContext } from '../contexts/BankContext';
-import { useRouter } from 'next/router';
 import { Ops } from '../components/Ops';
 
 export default function Home() {
     const { name, password } = useContext(BankContext);
-    const router = useRouter();
     const vazio = "";
-    console.log(name, password);
+    
     return (
 
         <>
