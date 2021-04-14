@@ -18,10 +18,10 @@ export function Friend() {
         console.log(option);
     }
     return (
-        <article className={friendStyle.friendArticle}>
+        <>
             {friendList.map((item, key) => (
-
-                <>
+                <article className={friendStyle.friendArticle} key={key}>
+                    
                     <header>
                         <div className={friendStyle.friendImg}>
                             <img src={`/${item.img}`} />
@@ -33,22 +33,21 @@ export function Friend() {
                             <h3>Chaves Pix</h3>
                         </header>
                         <div className={friendStyle.friendPixItem}>
-                            <input type="radio" id={`option${key}`} checked={option === item.optionCelular} value={item.optionCelular} onChange={(e) => { setOption(e.target.value) }}></input>
-                            <label htmlFor={`option${key}`}>Celular</label>
+                            <input type="radio" id={`${item.nome}${key}`} checked={option === item.optionCelular} value={item.optionCelular} onChange={(e) => { setOption(e.target.value) }}></input>
+                            <label htmlFor={`${item.nome}${key}`}>Celular</label>
                         </div>
                         <div className={friendStyle.friendPixItem}>
-                            <input type="radio" id={`option${key+1}`} checked={option === item.optionEmail} value={item.optionEmail} onChange={(e) => { setOption(e.target.value) }}></input>
-                            <label htmlFor={`option${key+1}`}>Email</label>
+                            <input type="radio" id={`${item.nome}${key+1}`} checked={option === item.optionEmail} value={item.optionEmail} onChange={(e) => { setOption(e.target.value) }}></input>
+                            <label htmlFor={`${item.nome}${key+1}`}>Email</label>
                         </div>
                         <div className={friendStyle.friendPixItem}>
-                            <input type="radio" id={`option${key+2}`} checked={option === item.optionCpf} value={item.optionCpf} onChange={(e) => { setOption(e.target.value) }}></input>
-                            <label htmlFor={`option${key+2}`}>CPF</label>
+                            <input type="radio" id={`${item.nome}${key+2}`} checked={option === item.optionCpf} value={item.optionCpf} onChange={(e) => { setOption(e.target.value) }}></input>
+                            <label htmlFor={`${item.nome}${key+2}`}>CPF</label>
                         </div>
                         <button onClick={teste}>Selecionar</button>
                     </div>
-                </>
+                </article>
             ))}
-        </article>
-
+        </>
     );
 }

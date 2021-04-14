@@ -5,9 +5,42 @@
         "rota": "mario",
         "optionCpf": "cpf-mario",
         "optionCelular": "celular-mario",
-        "optionEmail": "option-email",
+        "optionEmail": "email-mario",
         "cpf": "11100011100",
         "celular": "911110000",
         "email": "mario@nintendo.com"
+    },
+    {
+        "nome": "Luigi",
+        "img": "luigi-card.png",
+        "rota": "luigi",
+        "optionCpf": "cpf-luigi",
+        "optionCelular": "celular-luigi",
+        "optionEmail": "email-luigi",
+        "cpf": "11100011102",
+        "celular": "911110002",
+        "email": "luigi@nintendo.com"
+    },
+    {
+        "nome": "Han Solo",
+        "img": "han-solo-card.png",
+        "rota": "han-solo",
+        "optionCpf": "cpf-han-solo",
+        "optionCelular": "celular-han-solo",
+        "optionEmail": "email-han-solo",
+        "cpf": "11100011103",
+        "celular": "911110003",
+        "email": "solo@falcon.com"
+    },
+    {
+        "nome": "Princesa Leia",
+        "img": "princesa-leia-card.png",
+        "rota": "princesa-leia",
+        "optionCpf": "cpf-princesa-leia",
+        "optionCelular": "celular-princesa-leia",
+        "optionEmail": "email-princesa-leia",
+        "cpf": "11100011104",
+        "celular": "911110004",
+        "email": "leia@alderan.com"
     }
 ]
