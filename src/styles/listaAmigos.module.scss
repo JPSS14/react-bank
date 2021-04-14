@@ -1,0 +1,86 @@
+@import "colors";
+.mainFriend{
+    flex-basis: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px 0;
+
+    > header{
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        color: $blue;
+        margin-bottom: 40px;
+    }
+
+    .friendArticle{
+        flex-basis: 47%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        justify-content: space-around;
+        background: $main;
+        padding: 15px 0;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 1.18) 0px 5px 4px 0px;
+
+        > header{
+            display: flex;
+            flex-wrap: wrap;
+            color: $blue;
+            justify-content: center;
+            flex-basis: 47%;
+            border-right: dashed 3px $dark;
+
+            .friendImg{
+                flex-basis: 80%;
+
+                img{
+                    width: 100%;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .friendPix{
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 47%;
+
+            header{
+                flex-basis: 100%;
+                text-align: left;
+                color: $blue;
+                font-size: 1.2em;
+            }
+            
+            .friendPixItem{
+                flex-basis: 100%;
+                font-size: 1.2em;
+
+                input{
+                    margin-right: 10px;
+                }
+                label{
+                    color: $blue;
+                    cursor: pointer;
+                }
+            }
+
+            button{
+                border: solid 2px $dark;
+                background: $blue;
+                border-radius: 20px;
+                flex-basis: 100%;
+                font-size: 1.1em;
+            }
+
+            button:hover{
+                border-color: #fff;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}
