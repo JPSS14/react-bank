@@ -1,19 +1,33 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import style from '../styles/main.module.scss';
 import friendStyle from '../styles/listaAmigos.module.scss';
+import friends from '../../friends.json'; 
+import {Friend} from '../components/Friend';
 
 export default function ListaDeAmigos() {
     const [option, setOption] = useState("");
+    const [friendList, setFriendList] = useState([]);
 
+    useEffect(() => {
+        const loadAll = async () =>{
+            let list = friends;
+            setFriendList(list);
+        }
+    }, []);
+    
     function teste() {
         console.log(option);
     }
+
+    
+
     return (
         <main className={style.main}>
             <section className={friendStyle.mainFriend}>
                 <header>
                     <h1>Lista de Amigos</h1>
                 </header>
+                <Friend/>
 
                 <article className={friendStyle.friendArticle}>
                     <header>

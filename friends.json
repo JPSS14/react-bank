@@ -1,0 +1,13 @@
+[
+    {
+        "nome": "Mario",
+        "img": "mario-card.png",
+        "rota": "mario",
+        "optionCpf": "cpf-mario",
+        "optionCelular": "celular-mario",
+        "optionEmail": "option-email",
+        "cpf": "11100011100",
+        "celular": "911110000",
+        "email": "mario@nintendo.com"
+    }
+]
