@@ -41,6 +41,11 @@
                     border-radius: 20px;
                 }
             }
+
+            h2{
+                flex-basis: 100%;
+                text-align: center;
+            }
         }
 
         .friendPix{
@@ -80,6 +85,69 @@
                 border-color: #fff;
                 color: #fff;
                 cursor: pointer;
+            }
+        }
+    }
+
+    
+    @media (max-width: 900px){
+        .friendArticle{
+            flex-basis: 47%;
+
+            > header{
+                flex-basis: 100%;
+                border-right: none;
+                border-bottom: dashed 3px $dark;
+                padding-bottom: 10px;
+            }
+
+            .friendPix{
+                flex-basis: 100%;
+                margin: 10px 0;
+                
+                > header{
+                    text-align: center;
+                }
+
+                .friendPixItem{
+                    margin: 10px 0px 5px 10px;
+                }
+            }
+
+            button{
+                padding: 10px;
+                margin: 10px 20px;
+            }
+        }
+    }
+
+    @media (max-width: 590px){
+        .friendArticle{
+            flex-basis: 85%;
+
+            > header{
+                flex-basis: 100%;
+                border-right: none;
+                border-bottom: dashed 3px $dark;
+                padding-bottom: 10px;
+            }
+
+            .friendPix{
+                flex-basis: 100%;
+                margin: 10px 0;
+                
+                > header{
+                    text-align: center;
+                }
+
+                .friendPixItem{
+                    margin: 10px 0px 5px 10px;
+                }
+            }
+
+            button{
+                padding: 10px;
+                margin: 10px 20px;
             }
         }
     }
