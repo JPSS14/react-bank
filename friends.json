@@ -55,14 +55,14 @@
         "email": "ciri@nifilgaard.com"
     },
     {
-        "nome": "Gerald de Rívia",
-        "img": "gerald-card.png",
-        "rota": "gerald",
-        "optionCpf": "cpf-gerald",
-        "optionCelular": "celular-gerald",
-        "optionEmail": "email-gerald",
+        "nome": "Geralt de Rívia",
+        "img": "geralt-card.png",
+        "rota": "geralt",
+        "optionCpf": "cpf-geralt",
+        "optionCelular": "celular-geralt",
+        "optionEmail": "email-geralt",
         "cpf": "11100011106",
         "celular": "911110006",
-        "email": "gerald@witcher.com"
+        "email": "geralt@witcher.com"
     }
 ]
