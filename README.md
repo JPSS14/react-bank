@@ -2,7 +2,9 @@
 
 React Bank é um simulador de banco, onde busco testar o uso do Sass e treinar o desenvolvimento de interfaces, além de enfatizar o uso de React, Next js e seus benefícios. Logo percebi que era possível implementar regras de negócio, seguem algumas abaixo.
 
-![Captura de Tela (592)](https://user-images.githubusercontent.com/40327303/113965446-c2798600-9803-11eb-89f8-81c040242dbf.png)
+![react-bank-count](https://user-images.githubusercontent.com/40327303/115132319-84375000-9fd5-11eb-8654-9635fb90b03b.png)
+
+![react-bank-friend](https://user-images.githubusercontent.com/40327303/115132308-771a6100-9fd5-11eb-851a-7cef2763df4e.png)
 
 # Regra de negócio
 
@@ -25,7 +27,6 @@ Vantagens: Ficar com até R$ - 1000,00, ter R$ 1000,00 no cartão de crédito e 
 ### Ouro
 Requisito: Ter no mínimo R$ 5000,00 de saldo.
 Vantagens: Ficar com até R$ - 5000,00, ter R$ 5000,00 no cartão de crédito e pegar R$ 5000,00 de empréstimo.
-
 
 ### Platina
 Requisito: Ter no mínimo R$ 15000,00 de saldo.
