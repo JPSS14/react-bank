@@ -1,12 +1,10 @@
 import Head from 'next/head'
-import { Header } from '../components/Header';
 import { Balance } from '../components/Balance';
 import { Profile } from '../components/Profile';
 import style from '../styles/main.module.scss';
 import { Services } from '../components/Services';
 import { PlansBox } from '../components/PlansBox';
 import { ProductsBox } from '../components/ProductsBox';
-import { Footer } from '../components/Footer';
 import { useContext } from 'react';
 import { BankContext } from '../contexts/BankContext';
 import { Ops } from '../components/Ops';
