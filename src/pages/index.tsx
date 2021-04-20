@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import { Header } from '../components/Header';
 import style from '../styles/main.module.scss';
-import { Footer } from '../components/Footer';
 import { useContext, useState } from 'react';
 import { useRouter } from 'next/router';
 import {BankContext} from '../contexts/BankContext';

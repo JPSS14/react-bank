@@ -1,8 +1,20 @@
 import {createContext, ReactNode, useState} from 'react';
+import friends from '../../friends.json';
 
 interface User{
     name: string;
     password: string;
+}
+
+interface Friend{
+    nome: string;
+    img: string;
+    rota: string;
+    optionCpf: string;
+    optionEmail: string;
+    cpf: string;
+    celular: string;
+    email: string;
 }
 
 interface BankContextData{
@@ -11,6 +23,8 @@ interface BankContextData{
     login: (name:string, password:string) => void;
     name: string;
     password: string;
+    pixOption: (friendOption: any) => void;
+    activeFriend: Friend;
 }
 
 export const BankContext = createContext({} as BankContextData);
@@ -20,10 +34,10 @@ interface BankProviderProps{
 }
 
 export function BankProvider({children}:BankProviderProps){
-
     const [balance, setBalance] = useState(0);
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
+    const [activeFriend, setActiveFriend] = useState(null);
 
     function updateBalance(value:number){
         setBalance(balance+value);
@@ -34,6 +48,11 @@ export function BankProvider({children}:BankProviderProps){
         setPassword(password);
     }
 
+    function pixOption(friendOption: any){
+        setActiveFriend(friends.filter(friends => friends.optionCpf === friendOption)[0]);
+        console.log(activeFriend);
+    }
+
     return(
         <BankContext.Provider
             value={{
@@ -41,7 +60,9 @@ export function BankProvider({children}:BankProviderProps){
                 updateBalance,
                 login,
                 name,
-                password
+                password,
+                pixOption,
+                activeFriend
             }}
         >
             {children}
