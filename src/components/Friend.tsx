@@ -22,6 +22,12 @@ export function Friend() {
         if (option.includes("cpf")) {
             router.push(`/pix/${option}`);
             pixOption(option);
+        } else if (option.includes("celular")) {
+            router.push(`/pix/${option}`);
+            pixOption(option);
+        } else if (option.includes("email")) {
+            router.push(`/pix/${option}`);
+            pixOption(option);
         }
         console.log(option);
     }
