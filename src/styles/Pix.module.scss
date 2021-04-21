@@ -154,3 +154,20 @@
         }
     }
 }
+
+.status{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: center;
+
+    p{
+        color: red;
+        text-align: center;
+        font-size: 1.5em;
+        border: solid 3px red;
+        padding: 10px 15px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+}

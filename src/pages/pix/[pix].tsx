@@ -1,21 +1,37 @@
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
 import { BankContext } from "../../contexts/BankContext";
-import {Balance} from "../../components/Balance";
+import { Balance } from "../../components/Balance";
 import style from '../../styles/main.module.scss';
 import pixStyle from '../../styles/Pix.module.scss';
 
 
 export default function Pix() {
     const router = useRouter();
-    const { activeFriend } = useContext(BankContext);
+    const { activeFriend, balance, transfer, password } = useContext(BankContext);
     const [value, setValue] = useState('');
-    const [password, setPassword] = useState('');
+    const [currentPassword, setCurrentPassword] = useState('');
+    const [option, setOption] = useState("valid");
 
     console.log("active: ", activeFriend.nome);
 
     function teste() {
-        console.log("password: ", password, " value: ", value);
+        const valor = parseFloat(value);
+        if (currentPassword === password) {
+            if (valor > 0) {
+
+            } else {
+                setOption("invalid-value");
+            }
+            if (valor > 0 && (balance - valor) > 0) {
+                setOption("valid");
+                transfer(valor);
+            } else {
+                setOption("invalid");
+            }
+        }else{
+            setOption("invalid-passoword")
+        }
     }
 
     return (
@@ -39,12 +55,19 @@ export default function Pix() {
                 <div className={pixStyle.articleInsert}>
                     <h2>Valor do Pix</h2>
                     <div className={pixStyle.insert}>
-                        <input type="number" value={value} onChange={(e) => setValue(e.target.value)} placeholder="R$"/>
-                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Sua senha" />
+                        <input type="number" value={value} onChange={(e) => setValue(e.target.value)} placeholder="R$" />
+                        <input type="password" value={currentPassword} onChange={(e) => setCurrentPassword(e.target.value)} placeholder="Sua senha" />
                         <button onClick={teste}>Inserir</button>
                     </div>
                 </div>
             </article>
+
+            {(option === "valid") ?
+                (<></>) :
+                (<div className={pixStyle.status}>
+                    <p>O valor informado supera seu limite!</p>
+                </div>)}
+
         </main>
     );
 }

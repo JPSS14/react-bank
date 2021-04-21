@@ -25,6 +25,7 @@ interface BankContextData {
     password: string;
     pixOption: (friendOption: any) => void;
     activeFriend: Friend;
+    transfer: (value: number) => void;
 }
 
 export const BankContext = createContext({} as BankContextData);
@@ -59,6 +60,10 @@ export function BankProvider({ children }: BankProviderProps) {
         console.log(activeFriend);
     }
 
+    function transfer(value:number){
+        setBalance(balance-value);
+    }
+
     return (
         <BankContext.Provider
             value={{
@@ -68,7 +73,8 @@ export function BankProvider({ children }: BankProviderProps) {
                 name,
                 password,
                 pixOption,
-                activeFriend
+                activeFriend,
+                transfer
             }}
         >
             {children}
