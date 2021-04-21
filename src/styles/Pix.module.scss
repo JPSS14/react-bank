@@ -1,0 +1,98 @@
+@import "colors";
+.article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 70%;
+    margin: 60px 0;
+    background: $main;
+    padding: 20px 10px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 1.18) 0px 5px 4px 0px;
+
+    >header{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 30%;
+        justify-content: center;
+        border-right: dashed 3px $dark;
+
+        .imgContainer{
+            flex-basis: 70%;
+
+            >img{
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+        h1{
+            flex-basis: 100%;
+            color: $blue;
+            text-align: center;
+            font-size: 1.7em;
+        }
+    }
+
+    .articleInfo{
+        flex-basis: 32%;
+        display: flex;
+        flex-wrap: wrap;
+        border-right: dashed 3px $dark;
+
+        h2{
+            color: $blue;
+            margin-left: 10px;
+        }
+
+        p{
+            color: $blue;
+            font-size: 1.2em;
+            flex-basis: 100%;
+            margin-left: 10px;
+
+            .info{
+                color: #fff;
+            }
+        }
+    }
+    .articleInsert{
+        flex-basis: 30%;
+        display: flex;
+        flex-wrap: wrap;
+
+        h2{
+            color: $blue;
+            flex-basis: 100%;
+        }
+
+        .insert{
+            flex-basis: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            input{
+                flex-basis: 90%;
+                font-size: 1.2em;
+                background: $dark;
+                border: solid 1px $blue;
+                border-radius: 20px;
+                margin-bottom: 10px;
+                color: $blue;
+                padding: 0 10px;
+            }
+            button{
+                flex-basis: 90%;
+                border-radius: 20px;
+                background: $blue;
+                border: solid 2px $dark;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+            button:hover{
+                color: #fff;
+                border: solid 2px #fff;
+            }
+        }
+    }
+}
