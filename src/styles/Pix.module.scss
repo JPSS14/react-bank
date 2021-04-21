@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     flex-basis: 70%;
-    margin: 60px 0;
+    margin: 80px 0;
     background: $main;
     padding: 20px 10px;
     border-radius: 20px;
@@ -13,12 +13,12 @@
     >header{
         display: flex;
         flex-wrap: wrap;
-        flex-basis: 30%;
+        flex-basis: 28%;
         justify-content: center;
         border-right: dashed 3px $dark;
 
         .imgContainer{
-            flex-basis: 70%;
+            flex-basis: 65%;
 
             >img{
                 width: 100%;
@@ -34,7 +34,7 @@
     }
 
     .articleInfo{
-        flex-basis: 32%;
+        flex-basis: 29%;
         display: flex;
         flex-wrap: wrap;
         border-right: dashed 3px $dark;
@@ -56,7 +56,7 @@
         }
     }
     .articleInsert{
-        flex-basis: 30%;
+        flex-basis: 15%;
         display: flex;
         flex-wrap: wrap;
 
@@ -72,7 +72,7 @@
             justify-content: center;
 
             input{
-                flex-basis: 90%;
+                flex-basis: 80%;
                 font-size: 1.2em;
                 background: $dark;
                 border: solid 1px $blue;
@@ -92,6 +92,64 @@
             button:hover{
                 color: #fff;
                 border: solid 2px #fff;
+            }
+        }
+    }
+
+    
+
+    @media (max-width: 1097px){
+        >header{
+            flex-basis: 49%;
+        }
+        .articleInfo{
+            flex-basis: 49%;
+            border: none;
+        }
+        .articleInsert{
+            flex-basis: 90%;
+            border-top: dashed 3px $dark;
+            margin-top: 10px;
+            padding-top: 10px;
+
+            h2{
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .insert{
+                > input{
+                    padding: 10px;
+                    flex-basis: 80%;
+                }
+                button{
+                    flex-basis: 80%;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 580px){
+        >header{
+            flex-basis: 100%;
+            border-right: none;
+            border-bottom: dashed 3px $dark;
+            padding-bottom: 10px;
+
+            .imgContainer{
+                flex-basis: 80%;
+            }
+        }
+        .articleInfo{
+            flex-basis: 80%;
+            border: none;
+            padding: 10px 0;
+
+            h2{
+                flex-basis: 100%;
+                text-align: center;
+                margin-bottom: 10px;
             }
         }
     }
