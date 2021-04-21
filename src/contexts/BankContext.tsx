@@ -25,7 +25,7 @@ interface BankContextData {
     password: string;
     pixOption: (friendOption: any) => void;
     activeFriend: Friend;
-    transfer: (value: number) => void;
+    transferValidation: (value: number, pass: string) => string;
 }
 
 export const BankContext = createContext({} as BankContextData);
@@ -39,6 +39,7 @@ export function BankProvider({ children }: BankProviderProps) {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [activeFriend, setActiveFriend] = useState(null);
+    const [activePlan, setActivePlan] = useState("Start");
 
     function updateBalance(value: number) {
         setBalance(balance + value);
@@ -60,8 +61,35 @@ export function BankProvider({ children }: BankProviderProps) {
         console.log(activeFriend);
     }
 
-    function transfer(value:number){
-        setBalance(balance-value);
+    function transfer(value: number) {
+        setBalance(balance - value);
+    }
+
+    function passwordValidation(pass: string) {
+        if (pass === password) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    function transferValidation(value: number, pass: string) {
+
+        let status: string;
+        if (passwordValidation(pass) > 0) {
+
+            if (activePlan === "Start" && (balance - value) > 0) {
+                setBalance(balance - value);
+                status = "valid";
+                return status;
+            } else {
+                status = "invalid";
+                return status;
+            }
+        }else{
+            status = "invalid-password";
+        }
+        return status;
     }
 
     return (
@@ -74,7 +102,7 @@ export function BankProvider({ children }: BankProviderProps) {
                 password,
                 pixOption,
                 activeFriend,
-                transfer
+                transferValidation
             }}
         >
             {children}

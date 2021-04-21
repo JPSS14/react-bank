@@ -8,7 +8,7 @@ import pixStyle from '../../styles/Pix.module.scss';
 
 export default function Pix() {
     const router = useRouter();
-    const { activeFriend, balance, transfer, password } = useContext(BankContext);
+    const { activeFriend, balance, transferValidation, password } = useContext(BankContext);
     const [value, setValue] = useState('');
     const [currentPassword, setCurrentPassword] = useState('');
     const [option, setOption] = useState("valid");
@@ -17,21 +17,9 @@ export default function Pix() {
 
     function teste() {
         const valor = parseFloat(value);
-        if (currentPassword === password) {
-            if (valor > 0) {
 
-            } else {
-                setOption("invalid-value");
-            }
-            if (valor > 0 && (balance - valor) > 0) {
-                setOption("valid");
-                transfer(valor);
-            } else {
-                setOption("invalid");
-            }
-        }else{
-            setOption("invalid-passoword")
-        }
+        setOption(transferValidation(valor, currentPassword));
+
     }
 
     return (
@@ -64,9 +52,14 @@ export default function Pix() {
 
             {(option === "valid") ?
                 (<></>) :
-                (<div className={pixStyle.status}>
-                    <p>O valor informado supera seu limite!</p>
-                </div>)}
+                (option === "invalid") ?
+                    (<div className={pixStyle.status}>
+                        <p>O valor informado supera seu limite!</p>
+                    </div>) :
+                    (option === "invalid-password") ?
+                        (<div className={pixStyle.status}>
+                            <p>Senha incorreta!</p>
+                        </div>) : (<></>)}
 
         </main>
     );
