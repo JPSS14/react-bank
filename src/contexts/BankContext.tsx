@@ -15,6 +15,7 @@ interface Friend {
     cpf: string;
     celular: string;
     email: string;
+    conta: string;
 }
 
 interface BankContextData {
@@ -78,9 +79,9 @@ export function BankProvider({ children }: BankProviderProps) {
         let status: string;
         if (passwordValidation(pass) > 0) {
 
-            if (activePlan === "Start" && (balance - value) > 0) {
+            if (activePlan === "Start" && (balance - value) >= 0) {
                 setBalance(balance - value);
-                status = "valid";
+                status = "insert";
                 return status;
             } else {
                 status = "invalid";

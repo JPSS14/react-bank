@@ -8,7 +8,8 @@
         "optionEmail": "email-mario",
         "cpf": "11100011100",
         "celular": "911110000",
-        "email": "mario@nintendo.com"
+        "email": "mario@nintendo.com",
+        "conta": "8741894-7"
     },
     {
         "nome": "Luigi",
@@ -19,7 +20,8 @@
         "optionEmail": "email-luigi",
         "cpf": "11100011102",
         "celular": "911110002",
-        "email": "luigi@nintendo.com"
+        "email": "luigi@nintendo.com",
+        "conta": "8745894-8"
     },
     {
         "nome": "Han Solo",
@@ -30,7 +32,8 @@
         "optionEmail": "email-han-solo",
         "cpf": "11100011103",
         "celular": "911110003",
-        "email": "solo@falcon.com"
+        "email": "solo@falcon.com",
+        "conta": "8745874-7"
     },
     {
         "nome": "Princesa Leia",
@@ -41,7 +44,8 @@
         "optionEmail": "email-princesa-leia",
         "cpf": "11100011104",
         "celular": "911110004",
-        "email": "leia@alderan.com"
+        "email": "leia@alderan.com",
+        "conta": "8745894-1"
     },
     {
         "nome": "Ciri",
@@ -52,7 +56,8 @@
         "optionEmail": "email-ciri",
         "cpf": "11100011105",
         "celular": "911110005",
-        "email": "ciri@nilfgaard.com"
+        "email": "ciri@nilfgaard.com",
+        "conta": "8145894-2"
     },
     {
         "nome": "Geralt de Rívia",
@@ -63,6 +68,7 @@
         "optionEmail": "email-geralt",
         "cpf": "11100011106",
         "celular": "911110006",
-        "email": "geralt@witcher.com"
+        "email": "geralt@witcher.com",
+        "conta": "8445194-2"
     }
 ]

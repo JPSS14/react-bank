@@ -15,11 +15,13 @@ export default function Pix() {
 
     console.log("active: ", activeFriend.nome);
 
-    function teste() {
+    function validation() {
         const valor = parseFloat(value);
-
-        setOption(transferValidation(valor, currentPassword));
-
+        if (valor > 0) {
+            setOption(transferValidation(valor, currentPassword));
+        } else {
+            setOption("invalid-value");
+        }
     }
 
     return (
@@ -39,13 +41,14 @@ export default function Pix() {
                     <p>CPF: <span className={pixStyle.info}>{activeFriend.cpf}</span></p>
                     <p>Celular: <span className={pixStyle.info}>{activeFriend.celular}</span></p>
                     <p>Email: <span className={pixStyle.info}>{activeFriend.email}</span></p>
+                    <p>Conta: <span className={pixStyle.info}>{activeFriend.conta}</span></p>
                 </div>
                 <div className={pixStyle.articleInsert}>
                     <h2>Valor do Pix</h2>
                     <div className={pixStyle.insert}>
                         <input type="number" value={value} onChange={(e) => setValue(e.target.value)} placeholder="R$" />
                         <input type="password" value={currentPassword} onChange={(e) => setCurrentPassword(e.target.value)} placeholder="Sua senha" />
-                        <button onClick={teste}>Inserir</button>
+                        <button onClick={validation}>Inserir</button>
                     </div>
                 </div>
             </article>
@@ -59,7 +62,16 @@ export default function Pix() {
                     (option === "invalid-password") ?
                         (<div className={pixStyle.status}>
                             <p>Senha incorreta!</p>
-                        </div>) : (<></>)}
+                        </div>) :
+                        (option === "invalid-value") ?
+                            (<div className={pixStyle.status}>
+                                <p>Valor inválido!</p>
+                            </div>) :
+                            (option === "insert") ?
+                                (<div className={pixStyle.statusCorrect}>
+                                    <p>Valor depositado com sucesso!</p>
+                                </div>) : (<></>)
+            }
 
         </main>
     );
