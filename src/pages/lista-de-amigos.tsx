@@ -1,20 +1,11 @@
 import style from '../styles/main.module.scss';
-import { useContext, useEffect, useState } from 'react';
 import friendStyle from '../styles/listaAmigos.module.scss';
-import friends from '../../friends.json';
-import { PixCard } from '../components/PixCard';
-import { TransferCard } from '../components/TransferCard';
+import { FriendTransfer } from '../components/FriendTransfer';
+import { FriendPix } from '../components/FriendPix';
+import { useRouter } from 'next/router';
 
 export default function ListaDeAmigos() {
-    const [friendList, setFriendList] = useState([]);
-
-    useEffect(() => {
-        const loadAll = async () => {
-            let list = friends;
-            setFriendList(list);
-        }
-        loadAll();
-    }, []);
+    const router = useRouter();
 
     return (
         <main className={style.main}>
@@ -23,13 +14,10 @@ export default function ListaDeAmigos() {
                     <h1>Lista de Amigos</h1>
                 </header>
 
-                {friendList.map((item, key) => (
-                    <>
-                        {/* <PixCard key={key} img={item.img} nome={item.nome} optionCelular={item.optionCelular} optionCpf={item.optionCpf} optionEmail={item.optionEmail} /> */}
-
-                        <TransferCard key={key} nome={item.nome} conta={item.conta} img={item.img}/>
-                    </>
-                ))}
+                {(router.query.mode === "pix") ?
+                    (<FriendPix />) :
+                    (<FriendTransfer />)
+                }
 
             </section>
         </main>

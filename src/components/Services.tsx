@@ -4,14 +4,14 @@ import Link from 'next/link';
 export function Services() {
     return (
         <>
-            <Link href="/lista-de-amigos">
+            <Link href="/lista-de-amigos?mode=pix">
                 <a className={style.mainService}>
                     <div>
                         <h1>Pix</h1>
                     </div>
                 </a>
             </Link>
-            <Link href="/transferencia">
+            <Link href="/lista-de-amigos?mode=transfer">
                 <a className={style.mainService}>
                     <div>
                         <h1>Transferência</h1>
