@@ -1,0 +1,143 @@
+@import "colors";
+.friendArticle{
+    flex-basis: 22%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    justify-content: space-around;
+    background: $main;
+    padding: 15px 0;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 1.18) 0px 5px 4px 0px;
+
+    > header{
+        display: flex;
+        flex-wrap: wrap;
+        color: $blue;
+        justify-content: center;
+        flex-basis: 100%;
+        border-bottom: dashed 3px $dark;
+        padding-bottom: 10px;
+
+        .friendImg{
+            flex-basis: 80%;
+
+            img{
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        h2{
+            flex-basis: 100%;
+            text-align: center;
+        }
+    }
+
+    .friendPix{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 90%;
+        justify-content: center;
+
+        header{
+            flex-basis: 100%;
+            text-align: center;
+            color: $blue;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        
+        .friendPixItem{
+            flex-basis: 100%;
+            font-size: 1.2em;
+            margin: 10px 0;
+
+            input{
+                margin-right: 10px;
+            }
+            label{
+                color: $blue;
+                cursor: pointer;
+            }
+        }
+
+        button{
+            border: solid 2px $dark;
+            background: $blue;
+            border-radius: 20px;
+            flex-basis: 100%;
+            font-size: 1.1em;
+            padding: 10px;
+        }
+
+        button:hover{
+            border-color: #fff;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media (max-width: 900px){
+    .friendArticle{
+        flex-basis: 47%;
+
+        > header{
+            flex-basis: 100%;
+            border-right: none;
+            border-bottom: dashed 3px $dark;
+            padding-bottom: 10px;
+        }
+
+        .friendPix{
+            flex-basis: 100%;
+            margin: 10px 0;
+            
+            > header{
+                text-align: center;
+            }
+
+            .friendPixItem{
+                margin: 10px 0px 5px 10px;
+            }
+        }
+
+        button{
+            padding: 10px;
+            margin: 10px 20px;
+        }
+    }
+}
+
+@media (max-width: 590px){
+    .friendArticle{
+        flex-basis: 85%;
+
+        > header{
+            flex-basis: 100%;
+            border-right: none;
+            border-bottom: dashed 3px $dark;
+            padding-bottom: 10px;
+        }
+
+        .friendPix{
+            flex-basis: 100%;
+            margin: 10px 0;
+            
+            > header{
+                text-align: center;
+            }
+
+            .friendPixItem{
+                margin: 10px 0px 5px 10px;
+            }
+        }
+
+        button{
+            padding: 10px;
+            margin: 10px 20px;
+        }
+    }
+}

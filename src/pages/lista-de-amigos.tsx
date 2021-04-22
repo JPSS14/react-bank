@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import friendStyle from '../styles/listaAmigos.module.scss';
 import friends from '../../friends.json';
 import { PixCard } from '../components/PixCard';
+import { TransferCard } from '../components/TransferCard';
 
 export default function ListaDeAmigos() {
     const [friendList, setFriendList] = useState([]);
@@ -24,7 +25,9 @@ export default function ListaDeAmigos() {
 
                 {friendList.map((item, key) => (
                     <>
-                        <PixCard key={key} img={item.img} nome={item.nome} optionCelular={item.optionCelular} optionCpf={item.optionCpf} optionEmail={item.optionEmail} />
+                        {/* <PixCard key={key} img={item.img} nome={item.nome} optionCelular={item.optionCelular} optionCpf={item.optionCpf} optionEmail={item.optionEmail} /> */}
+
+                        <TransferCard key={key} nome={item.nome} conta={item.conta} img={item.img}/>
                     </>
                 ))}
 
