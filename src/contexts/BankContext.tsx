@@ -27,6 +27,7 @@ interface BankContextData {
     pixOption: (friendOption: any) => void;
     activeFriend: Friend;
     transferValidation: (value: number, pass: string) => string;
+    transferOption: (friend: any) => void;
 }
 
 export const BankContext = createContext({} as BankContextData);
@@ -59,7 +60,10 @@ export function BankProvider({ children }: BankProviderProps) {
         } else if (friendOption.includes("email")) {
             setActiveFriend(friends.filter(friends => friends.optionEmail === friendOption)[0]);
         }
-        console.log(activeFriend);
+    }
+
+    function transferOption(friend: any){
+        setActiveFriend(friends.filter(friends => friends.conta === friend)[0])
     }
 
     function transfer(value: number) {
@@ -103,7 +107,8 @@ export function BankProvider({ children }: BankProviderProps) {
                 password,
                 pixOption,
                 activeFriend,
-                transferValidation
+                transferValidation,
+                transferOption
             }}
         >
             {children}

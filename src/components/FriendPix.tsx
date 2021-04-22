@@ -20,13 +20,13 @@ export function FriendPix() {
 
     function select() {
         if (option.includes("cpf")) {
-            router.push(`/pix/${option}`);
+            router.push(`/transfer/${option}`);
             pixOption(option);
         } else if (option.includes("celular")) {
-            router.push(`/pix/${option}`);
+            router.push(`/transfer/${option}`);
             pixOption(option);
         } else if (option.includes("email")) {
-            router.push(`/pix/${option}`);
+            router.push(`/transfer/${option}`);
             pixOption(option);
         }
         console.log(option);

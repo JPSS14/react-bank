@@ -1,10 +1,14 @@
 import style from '../styles/FriendTransfer.module.scss';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import friends from '../../friends.json';
+import { Router, useRouter } from 'next/router';
+import { BankContext } from '../contexts/BankContext';
 
 export function FriendTransfer() {
     const [friendList, setFriendList] = useState([]);
     const [option, setOption] = useState("");
+    const {transferOption} = useContext(BankContext);
+    const router = useRouter();
 
     useEffect(() => {
         const loadAll = async () => {
@@ -13,6 +17,13 @@ export function FriendTransfer() {
         }
         loadAll();
     }, []);
+
+    function select(){
+        if(option!=""){
+            router.push(`/transfer/${option}`);
+            transferOption(option);
+        }
+    }
 
     return (
         <>
@@ -33,7 +44,7 @@ export function FriendTransfer() {
                             <input type="radio" id={`${item.nome}${item.key + 1}`} checked={option === item.conta} value={item.conta} onChange={(e) => { setOption(e.target.value) }}></input>
                             <label htmlFor={`${item.nome}${item.key + 1}`}>Conta: {item.conta}</label>
                         </div>
-                        <button>Selecionar</button>
+                        <button onClick={select}>Selecionar</button>
                     </div>
                 </article>
             ))}
