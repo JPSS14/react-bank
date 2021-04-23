@@ -13,7 +13,7 @@ export function PlansBox() {
                 <div className={style.content}>
                     <section className={style.mainPlansSection}>
 
-                        <Link href="/planos">
+                        <Link href="/planos?content=all">
                             <a className={style.mainPlansHelp}>
                                 <article>
                                     <header>
@@ -23,7 +23,7 @@ export function PlansBox() {
                             </a>
                         </Link>
 
-                        <Link href="/prata">
+                        <Link href="/planos?content=silver">
                             <a className={style.mainPlansArticle}>
                                 <article>
                                     <header>
@@ -33,7 +33,7 @@ export function PlansBox() {
                             </a>
                         </Link>
 
-                        <Link href="/ouro">
+                        <Link href="/planos?content=gold">
                             <a className={style.mainPlansArticle}>
                                 <article>
                                     <header>
@@ -43,7 +43,7 @@ export function PlansBox() {
                             </a>
                         </Link>
 
-                        <Link href="/platina">
+                        <Link href="/planos?content=platinum">
                             <a className={style.mainPlansArticle}>
                                 <article>
                                     <header>
@@ -57,7 +57,7 @@ export function PlansBox() {
                 </div>
             </div>
 
-            <Link href="/planos">
+            <Link href="/planos?content=all">
                 <a  className={style.mainPlansBoxMobile}>
                     <div>
                         <div>

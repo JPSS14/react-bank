@@ -27,7 +27,7 @@
 
         >header{
             flex-basis: 100%;
-            margin: 15px 0;
+            margin: 10px 0;
             font-size: 1.3em;
             color: $blue;
             text-align: center;
@@ -83,6 +83,10 @@
         h2{
             color: silver;
         }
+        p{
+            padding-bottom: 10px;
+            border-bottom: dashed 3px $dark;
+        }
         button{
             border: solid 2px silver;
             color: silver;
@@ -98,6 +102,10 @@
         h2{
             color: gold;
         }
+        p{
+            padding-bottom: 10px;
+            border-bottom: dashed 3px $dark;
+        }
         button{
             border: solid 2px gold;
             color: gold;
@@ -112,6 +120,10 @@
         color:paleturquoise;
         h2{
             color: paleturquoise;
+        }
+        p{
+            padding-bottom: 10px;
+            border-bottom: dashed 3px $dark;
         }
         button{
             border: solid 2px paleturquoise;
