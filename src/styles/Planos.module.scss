@@ -1,0 +1,128 @@
+@import "colors";
+.mainSection{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 90%;
+    justify-content: space-around;
+    margin: 40px 0;
+
+    >header{
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        color: $blue;
+        margin: 20px 0;
+    }
+
+    .mainArticle{
+        flex-basis: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        background: $main;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 1.18) 0px 5px 4px 0px;
+        border: dashed 3px $dark;
+
+
+        >header{
+            flex-basis: 100%;
+            margin: 15px 0;
+            font-size: 1.3em;
+            color: $blue;
+            text-align: center;
+        }
+
+        .mainArticleContent{
+            display: flex;
+            flex-wrap: wrap;
+
+            h3{
+                flex-basis: 100%;
+                color: #111;
+                font-size: 1.3em;
+                margin: 3px 0;
+            }
+
+            p{
+                flex-basis: 100%;
+                text-align: justify;
+                margin: 4px 0;
+            }
+        }
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 100%;
+            padding: 20px;
+            max-height: 20px;
+            margin-top: 100px;
+            background: $dark;
+            border: solid 2px $blue;
+            border-radius: 20px;
+            color: $blue;
+            font-size: 1.2em;
+            text-align: center;
+            cursor: pointer;
+        }
+        button:hover{
+            color: $dark;
+            background: $blue;
+            border: solid 2px $dark;
+        }
+        .lastButton{
+            margin-top: 10px;
+        }
+      
+    }
+
+    .silver{
+        border: solid 3px silver;
+        color:silver;
+        h2{
+            color: silver;
+        }
+        button{
+            border: solid 2px silver;
+            color: silver;
+        }
+        button:hover{
+            background: silver;
+        }
+    }
+
+    .gold{
+        border: solid 3px gold;
+        color:gold;
+        h2{
+            color: gold;
+        }
+        button{
+            border: solid 2px gold;
+            color: gold;
+        }
+        button:hover{
+            background: gold;
+        }
+    }
+
+    .platiun{
+        border: solid 3px paleturquoise;
+        color:paleturquoise;
+        h2{
+            color: paleturquoise;
+        }
+        button{
+            border: solid 2px paleturquoise;
+            color: paleturquoise;
+        }
+        button:hover{
+            background: paleturquoise;
+        }
+    }
+    
+    
+    
+}
+
