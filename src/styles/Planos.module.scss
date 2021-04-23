@@ -121,6 +121,33 @@
             background: paleturquoise;
         }
     }
+
+    @media(max-width: 960px){
+        .mainArticle{
+            flex-basis: 47%;
+            margin-bottom: 20px;
+            button{
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @media(max-width: 740px){
+        .mainArticle{
+            flex-basis: 60%;
+            margin-bottom: 20px;
+            button{
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @media(max-width: 550px){
+        .mainArticle{
+            flex-basis: 90%;
+            margin-bottom: 20px;
+        }
+    }
     
     
     
