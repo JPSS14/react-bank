@@ -21,12 +21,9 @@ const [value, setValue] = useState('');
             </header>
             <div className={style.insertBalanceContent}>
                 <div className={style.balance}>
-                    <p>R$</p>
-                    <input type="number" value={value} onChange={(e) => setValue(e.target.value)} id="balance"></input>
+                    <input type="number" value={value} onChange={(e) => setValue(e.target.value)} id="balance" placeholder="R$"></input>
                 </div>
-                <div className={style.insertButton} onClick={insert}>
-                    <p>Inserir</p>
-                </div>
+                <button className={style.insertButton} onClick={insert}>Inserir</button>
             </div>
         </div>
     );
