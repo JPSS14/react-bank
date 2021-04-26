@@ -127,9 +127,9 @@ export function BankProvider({ children }: BankProviderProps) {
 
     function platinumPlanValidation(plan: string) {
         let status: string = "";
-        if (plan === "ouro" && balance >= 5000) {
-            setActivePlan("ouro");
-            status = "ouro";
+        if (plan === "platina" && balance >= 15000) {
+            setActivePlan("platina");
+            status = "platina";
             return status;
         }else{
             status = "platinum-invalid-balance";

@@ -43,21 +43,22 @@ export default function Planos() {
                                 <p>Com o plano prata você pode ficar até com R$ -1000,00.</p>
                             </div>
                             <button onClick={() => validacao("prata")}>Selecionar</button>
-                        </article>
-
-                        {planStatus === "" ? (<></>) :
+                            {planStatus === "" ? (<></>) :
                             (planStatus === "prata") ?
                                 (
-                                    <div>
-                                        Parabéns
+                                    <div className={planStyle.aceptMensage}>
+                                        <p>Bem vindo ao Prata!</p>
                                     </div>
                                 ) :
                                 (planStatus === "silver-invalid-balance") ?
                                     (
-                                        <div>
-                                            Infelizmente deu ruim prata
+                                        <div className={planStyle.failMensage}>
+                                            <p>O seu saldo é insuficiente</p>
                                         </div>
                                     ) : (<></>)}
+                        </article>
+
+                        
                     </>
                 ) : (<></>)}
 
@@ -78,21 +79,22 @@ export default function Planos() {
                                 <p>Com o plano ouro você pode ficar até com R$ -5000,00.</p>
                             </div>
                             <button onClick={() => validacao("ouro")}>Selecionar</button>
-                        </article>
-
-                        {planStatus === "" ? (<></>) :
+                            {planStatus === "" ? (<></>) :
                             (planStatus === "ouro") ?
                                 (
-                                    <div>
-                                        Parabéns
+                                    <div className={planStyle.aceptMensage}>
+                                        <p>Bem vindo ao Ouro!</p>
                                     </div>
                                 ) :
                                 (planStatus === "gold-invalid-balance") ?
                                     (
-                                        <div>
-                                            Infelizmente deu ruim
+                                        <div className={planStyle.failMensage}>
+                                            <p>O seu saldo é insuficiente</p>
                                         </div>
                                     ) : (<></>)}
+                        </article>
+
+                        
                     </>
                 ) : (<></>)}
 
@@ -115,21 +117,22 @@ export default function Planos() {
                                 <p>Com o plano platina você pode fazer financiamento de casas e carros!</p>
                             </div>
                             <button className={planStyle.lastButton} onClick={() => validacao("platina")}>Selecionar</button>
-                        </article>
-
-                        {planStatus === "" ? (<></>) :
+                            {planStatus === "" ? (<></>) :
                             (planStatus === "platina") ?
                                 (
-                                    <div>
-                                        Parabéns
+                                    <div className={planStyle.aceptMensage}>
+                                        <p>Bem vindo ao Platina!</p>
                                     </div>
                                 ) :
                                 (planStatus === "platinum-invalid-balance") ?
                                     (
-                                        <div>
-                                            Infelizmente deu ruim platina
+                                        <div className={planStyle.failMensage}>
+                                            <p>O seu saldo é insuficiente</p>
                                         </div>
                                     ) : (<></>)}
+                        </article>
+
+                        
                     </>
                 ) : (<></>)}
 

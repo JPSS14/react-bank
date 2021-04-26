@@ -94,6 +94,32 @@
         button:hover{
             background: silver;
         }
+
+        .aceptMensage{
+            display: flex;
+            flex-basis: 100%;
+            margin: 10px 0;
+            font-size: 1.2em;
+            justify-content: center;
+
+            p{
+                align-items: center;
+                border: 0;
+            }
+        }
+        .failMensage{
+            display: flex;
+            flex-basis: 100%;
+            margin: 10px 0;
+            font-size: 1.2em;
+            justify-content: center;
+
+            p{
+                align-items: center;
+                border: 0;
+                color: red;
+            }
+        }
     }
 
     .gold{
@@ -112,6 +138,32 @@
         }
         button:hover{
             background: gold;
+        }
+
+        .aceptMensage{
+            display: flex;
+            flex-basis: 100%;
+            margin: 10px 0;
+            font-size: 1.2em;
+            justify-content: center;
+
+            p{
+                align-items: center;
+                border: 0;
+            }
+        }
+        .failMensage{
+            display: flex;
+            flex-basis: 100%;
+            margin: 10px 0;
+            font-size: 1.2em;
+            justify-content: center;
+
+            p{
+                align-items: center;
+                border: 0;
+                color: red;
+            }
         }
     }
 
@@ -132,7 +184,36 @@
         button:hover{
             background: paleturquoise;
         }
+
+        .aceptMensage{
+            display: flex;
+            flex-basis: 100%;
+            margin: 10px 0;
+            font-size: 1.2em;
+            justify-content: center;
+
+            p{
+                align-items: center;
+                border: 0;
+            }
+        }
+
+        .failMensage{
+            display: flex;
+            flex-basis: 100%;
+            margin: 10px 0;
+            font-size: 1.2em;
+            justify-content: center;
+
+            p{
+                align-items: center;
+                border: 0;
+                color: red;
+            }
+        }
     }
+
+    
 
     @media(max-width: 960px){
         .mainArticle{
