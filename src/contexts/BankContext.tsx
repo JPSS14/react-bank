@@ -28,6 +28,9 @@ interface BankContextData {
     activeFriend: Friend;
     transferValidation: (value: number, pass: string) => string;
     transferOption: (friend: any) => void;
+    silverPlanValidation: (plan: any) => string;
+    goldPlanValidation: (plan: any) => string;
+    platinumPlanValidation: (plan: any) => string;
 }
 
 export const BankContext = createContext({} as BankContextData);
@@ -42,6 +45,7 @@ export function BankProvider({ children }: BankProviderProps) {
     const [password, setPassword] = useState('');
     const [activeFriend, setActiveFriend] = useState(null);
     const [activePlan, setActivePlan] = useState("Start");
+
 
     function updateBalance(value: number) {
         setBalance(balance + value);
@@ -62,7 +66,7 @@ export function BankProvider({ children }: BankProviderProps) {
         }
     }
 
-    function transferOption(friend: any){
+    function transferOption(friend: any) {
         setActiveFriend(friends.filter(friends => friends.conta === friend)[0])
     }
 
@@ -91,8 +95,44 @@ export function BankProvider({ children }: BankProviderProps) {
                 status = "invalid";
                 return status;
             }
-        }else{
+        } else {
             status = "invalid-password";
+        }
+        return status;
+    }
+
+    function silverPlanValidation(plan: string) {
+        let status: string = "";
+        if (plan === "prata" && balance >= 1000) {
+            setActivePlan("prata");
+            status = "prata";
+            return status;
+        }else{
+            status = "silver-invalid-balance";
+        }
+        return status;
+    }
+
+    function goldPlanValidation(plan: string) {
+        let status: string = "";
+        if (plan === "ouro" && balance >= 5000) {
+            setActivePlan("ouro");
+            status = "ouro";
+            return status;
+        }else{
+            status = "gold-invalid-balance";
+        }
+        return status;
+    }
+
+    function platinumPlanValidation(plan: string) {
+        let status: string = "";
+        if (plan === "ouro" && balance >= 5000) {
+            setActivePlan("ouro");
+            status = "ouro";
+            return status;
+        }else{
+            status = "platinum-invalid-balance";
         }
         return status;
     }
@@ -108,7 +148,10 @@ export function BankProvider({ children }: BankProviderProps) {
                 pixOption,
                 activeFriend,
                 transferValidation,
-                transferOption
+                transferOption,
+                silverPlanValidation,
+                goldPlanValidation,
+                platinumPlanValidation
             }}
         >
             {children}
