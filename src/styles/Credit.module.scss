@@ -1,0 +1,55 @@
+@import "colors";
+.credit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: $main;
+    flex-basis: 50%;
+    margin: 180px 0;
+    border-radius: 20px;
+    padding: 10px 0;
+    border: solid 1px $blue;
+
+    > header{
+        flex-basis: 100%;
+        text-align: center;
+        color: $blue;
+        padding: 10px;
+    }
+
+    .disponibleBalance{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-basis: 50%;
+
+        input{
+            flex-basis: 70%;
+            margin: 20px 0;
+            font-size: 1.2em;
+            border-radius: 20px;
+            background: $dark;
+            padding: 7px;
+            border: solid 2px $blue;
+            color: $blue;
+        }
+        button{
+            flex-basis: 50%;
+            background: $blue;
+            padding: 10px;
+            color: $dark;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 20px;
+            margin: 15px 0;
+            border: solid 2px $dark;
+
+            &:hover{
+                color: #fff;
+                border: solid 2px #fff;
+            }
+        }
+    }
+
+}
