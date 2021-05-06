@@ -31,6 +31,7 @@ interface BankContextData {
     silverPlanValidation: (plan: any) => string;
     goldPlanValidation: (plan: any) => string;
     platinumPlanValidation: (plan: any) => string;
+    activePlan: string;
 }
 
 export const BankContext = createContext({} as BankContextData);
@@ -151,7 +152,8 @@ export function BankProvider({ children }: BankProviderProps) {
                 transferOption,
                 silverPlanValidation,
                 goldPlanValidation,
-                platinumPlanValidation
+                platinumPlanValidation,
+                activePlan
             }}
         >
             {children}

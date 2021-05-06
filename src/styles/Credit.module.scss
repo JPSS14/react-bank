@@ -8,7 +8,8 @@
     margin: 100px 0;
     border-radius: 20px;
     padding: 10px 5px;
-    border: solid 1px $blue;
+    border: solid 3px $blue;
+    box-shadow: rgba(0, 0, 0, 1.18) 0px 5px 4px 0px;
 
     > header{
         flex-basis: 100%;
@@ -34,21 +35,93 @@
     }
     button{
         flex-basis: 100%;
-        background: $blue;
+        background: $dark;
         padding: 10px;
-        color: $dark;
+        color: #000;
         font-size: 1.2em;
         cursor: pointer;
         text-align: center;
         border-radius: 20px;
         margin: 15px 0;
-        border: solid 2px $dark;
+        border: solid 2px #000;
 
         &:hover{
             color: #fff;
             border: solid 2px #fff;
         }
         
+    }
+}
+
+.silver{
+    border: solid 3px silver;
+    color:silver;
+
+    > header{
+        color: silver;
+    }
+
+    .balance{
+        color: silver;
+    }
+
+    button{
+        border: solid 2px silver;
+        color: silver;
+    }
+
+    button:hover{
+        background: silver;
+        color: $dark;
+        border: solid 2px $dark;
+    }
+}
+
+.gold{
+    border: solid 3px gold;
+    color:gold;
+
+    > header{
+        color: gold;
+    }
+
+    .balance{
+        color: gold;
+    }
+
+    button{
+        border: solid 2px gold;
+        color: gold;
+    }
+    
+    button:hover{
+        background: gold;
+        color: $dark;
+        border: solid 2px $dark;
+    }
+}
+
+.platinum{
+    border: solid 3px paleturquoise;
+    color:paleturquoise;
+
+    > header{
+        color: paleturquoise;
+    }
+
+    .balance{
+        color: paleturquoise;
+    }
+
+    button{
+        border: solid 2px paleturquoise;
+        color: paleturquoise;
+    }
+    
+    button:hover{
+        background: paleturquoise;
+        color: $dark;
+        border: solid 2px $dark;
     }
 }
 
