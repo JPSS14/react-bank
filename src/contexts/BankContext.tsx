@@ -32,6 +32,8 @@ interface BankContextData {
     goldPlanValidation: (plan: any) => string;
     platinumPlanValidation: (plan: any) => string;
     activePlan: string;
+    disponibleCredit: number;
+    creditSolicitation: (plan: string) => void;
 }
 
 export const BankContext = createContext({} as BankContextData);
@@ -46,6 +48,8 @@ export function BankProvider({ children }: BankProviderProps) {
     const [password, setPassword] = useState('');
     const [activeFriend, setActiveFriend] = useState(null);
     const [activePlan, setActivePlan] = useState("Start");
+    const [disponibleCredit, setDisponibleCredit] = useState(0);
+    const [activeCredit, setActiveCredit] = useState(0);
 
 
     function updateBalance(value: number) {
@@ -106,6 +110,7 @@ export function BankProvider({ children }: BankProviderProps) {
         let status: string = "";
         if (plan === "prata" && balance >= 1000) {
             setActivePlan("prata");
+            setDisponibleCredit(1000);
             status = "prata";
             return status;
         }else{
@@ -118,6 +123,7 @@ export function BankProvider({ children }: BankProviderProps) {
         let status: string = "";
         if (plan === "ouro" && balance >= 5000) {
             setActivePlan("ouro");
+            setDisponibleCredit(5000);
             status = "ouro";
             return status;
         }else{
@@ -130,12 +136,21 @@ export function BankProvider({ children }: BankProviderProps) {
         let status: string = "";
         if (plan === "platina" && balance >= 15000) {
             setActivePlan("platina");
+            setDisponibleCredit(15000);
             status = "platina";
             return status;
         }else{
             status = "platinum-invalid-balance";
         }
         return status;
+    }
+
+    function creditSolicitation(plan:string){
+        switch (plan){
+            case "prata": setActiveCredit(1000); break;
+            case "ouro": setActiveCredit(5000); break;
+            case "platina": setActiveCredit(15000); break;
+        }
     }
 
     return (
@@ -153,7 +168,9 @@ export function BankProvider({ children }: BankProviderProps) {
                 silverPlanValidation,
                 goldPlanValidation,
                 platinumPlanValidation,
-                activePlan
+                activePlan,
+                disponibleCredit,
+                creditSolicitation
             }}
         >
             {children}

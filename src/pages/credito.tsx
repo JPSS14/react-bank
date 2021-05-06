@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { BankContext } from '../contexts/BankContext';
 
 export default function credito() {
-    const { activePlan } = useContext(BankContext);
+    const { activePlan, disponibleCredit, creditSolicitation } = useContext(BankContext);
     console.log(activePlan);
     return (
         <main className={style.main}>
@@ -25,14 +25,15 @@ export default function credito() {
 
                     </div>
                 </>) :
-                (<>    
+                (<>
                     <div className={`${creditStyle.credit} ${activePlan === "prata" ? creditStyle.silver : activePlan === "ouro" ? creditStyle.gold : activePlan === "platina" ? creditStyle.platinum : creditStyle.credit}`}>
                         <header>
                             <h1>Crédito Disponível</h1>
                         </header>
-
-                        <p className={creditStyle.balance}>R$ 1000</p>
-                        <p>Parabéns você pertence ao plano … e pode solicitar essa quantia de crédito, solicite agora e tenha a opção de compra com o seu crédito!</p>
+                        <p className={creditStyle.balance}>
+                            R$ {disponibleCredit}
+                        </p>
+                        <p>Parabéns você pertence ao plano {activePlan === "prata" ? (<>prata</>) : activePlan === "ouro" ? (<>ouro</>) : (<>platina</>)} e pode solicitar essa quantia de crédito, solicite agora e tenha a opção de compra com o seu crédito!</p>
                         <button type="button">Solicitar Crédito</button>
 
                     </div>
