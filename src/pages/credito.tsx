@@ -6,7 +6,9 @@ import { BankContext } from '../contexts/BankContext';
 
 export default function credito() {
     const { activePlan, disponibleCredit, creditSolicitation } = useContext(BankContext);
-    console.log(activePlan);
+    function solicitation(){
+        creditSolicitation(activePlan);
+    }
     return (
         <main className={style.main}>
             <header className={style.mainFull90}>
@@ -34,7 +36,7 @@ export default function credito() {
                             R$ {disponibleCredit}
                         </p>
                         <p>Parabéns você pertence ao plano {activePlan === "prata" ? (<>prata</>) : activePlan === "ouro" ? (<>ouro</>) : (<>platina</>)} e pode solicitar essa quantia de crédito, solicite agora e tenha a opção de compra com o seu crédito!</p>
-                        <button type="button">Solicitar Crédito</button>
+                        <button type="button" onClick={solicitation}>Solicitar Crédito</button>
 
                     </div>
                 </>)}

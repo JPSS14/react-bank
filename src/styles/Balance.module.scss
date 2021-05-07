@@ -11,16 +11,43 @@
     border-radius: 20px;
     overflow: hidden;
 
-    header{
-        margin: 15px 20px;
+    .balance{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-basis: 100%;
+
+        header{
+            margin: 15px 20px;
+        }
+
+        h1{
+            font-size: 1.4em;
+        }
+        p{
+            font-size: 1.4em;
+            margin-left: 10px;
+        }
     }
 
-    h1{
-        font-size: 1.6em;
-    }
-    p{
-        font-size: 1.6em;
-        margin-left: 10px;
+    .credit{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-basis: 100%;
+        border-top: solid 3px #333;
+
+        header{
+            margin: 15px 20px;
+        }
+
+        h1{
+            font-size: 1.4em;
+        }
+        p{
+            font-size: 1.4em;
+            margin-left: 10px;
+        }
     }
 
     .mainBalanceShow{

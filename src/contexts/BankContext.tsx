@@ -34,6 +34,7 @@ interface BankContextData {
     activePlan: string;
     disponibleCredit: number;
     creditSolicitation: (plan: string) => void;
+    activeCredit: number;
 }
 
 export const BankContext = createContext({} as BankContextData);
@@ -124,6 +125,7 @@ export function BankProvider({ children }: BankProviderProps) {
         if (plan === "ouro" && balance >= 5000) {
             setActivePlan("ouro");
             setDisponibleCredit(5000);
+            console.log(activeCredit);
             status = "ouro";
             return status;
         }else{
@@ -170,7 +172,8 @@ export function BankProvider({ children }: BankProviderProps) {
                 platinumPlanValidation,
                 activePlan,
                 disponibleCredit,
-                creditSolicitation
+                creditSolicitation,
+                activeCredit
             }}
         >
             {children}
