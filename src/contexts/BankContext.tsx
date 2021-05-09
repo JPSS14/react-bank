@@ -52,16 +52,18 @@ export function BankProvider({ children }: BankProviderProps) {
     const [disponibleCredit, setDisponibleCredit] = useState(0);
     const [activeCredit, setActiveCredit] = useState(0);
 
-
+    // Atualiza o saldo do usuário
     function updateBalance(value: number) {
         setBalance(balance + value);
     }
 
+    // Cadastra o nome e senha do usuário
     function login(name: string, password: string) {
         setName(name);
         setPassword(password);
     }
 
+    // Verifica qual opção e amigo, que o usuário escolheu para fazer a transferência, filtra o array para encontrar os dados que correspondam ao amigo escolhido
     function pixOption(friendOption: any) {
         if (friendOption.includes("cpf")) {
             setActiveFriend(friends.filter(friends => friends.optionCpf === friendOption)[0]);
@@ -72,14 +74,17 @@ export function BankProvider({ children }: BankProviderProps) {
         }
     }
 
+    // Seleciona o amigo e deixa as informações dele salvas
     function transferOption(friend: any) {
         setActiveFriend(friends.filter(friends => friends.conta === friend)[0])
     }
 
+    // Retira o saldo da conta
     function transfer(value: number) {
         setBalance(balance - value);
     }
 
+    // Verifica se a senha está correta
     function passwordValidation(pass: string) {
         if (pass === password) {
             return 1;
@@ -88,6 +93,7 @@ export function BankProvider({ children }: BankProviderProps) {
         }
     }
 
+    // Faz a validação para realizar a transferencia, verifica a senha, verifica o saldo, e rotorna o status se a transferencia foi realizada ou não
     function transferValidation(value: number, pass: string) {
 
         let status: string;
@@ -107,6 +113,7 @@ export function BankProvider({ children }: BankProviderProps) {
         return status;
     }
 
+    // Valida se o usuário atende aos requesitos do plano prata
     function silverPlanValidation(plan: string) {
         let status: string = "";
         if (plan === "prata" && balance >= 1000) {
@@ -120,6 +127,7 @@ export function BankProvider({ children }: BankProviderProps) {
         return status;
     }
 
+    // Valida se o usuário atende aos requesitos do plano ouro
     function goldPlanValidation(plan: string) {
         let status: string = "";
         if (plan === "ouro" && balance >= 5000) {
@@ -134,6 +142,7 @@ export function BankProvider({ children }: BankProviderProps) {
         return status;
     }
 
+    // Valida se o usuário atende aos requesitos do plano platina
     function platinumPlanValidation(plan: string) {
         let status: string = "";
         if (plan === "platina" && balance >= 15000) {
@@ -147,6 +156,7 @@ export function BankProvider({ children }: BankProviderProps) {
         return status;
     }
 
+    // Inseri o saldo de crédito de acordo com cada plano
     function creditSolicitation(plan:string){
         switch (plan){
             case "prata": setActiveCredit(1000); break;
