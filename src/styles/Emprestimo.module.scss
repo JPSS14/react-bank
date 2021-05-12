@@ -1,0 +1,65 @@
+@import "colors";
+.mainEmprest{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: $main;
+    flex-basis: 50%;
+    margin: 80px 0;
+    border-radius: 20px;
+    border: solid 1px $blue;
+
+    > header{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+
+        h1{
+            flex-basis: 100%;
+            text-align: center;
+            color: $blue;
+            margin: 10px 0;
+        }
+
+        p{
+            flex-basis: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+    }
+
+    .emprest{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        justify-content: center;
+        padding: 10px;
+
+        input{
+            flex-basis: 100%;
+            color: $blue;
+            border: solid 2px $blue;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: $dark;
+            font-size: 1.2em;
+        }
+
+        button{
+            margin: 20px 0;
+            flex-basis: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+            background: $blue;
+            border: solid 2px #000;
+            color: #000;
+            border-radius: 20px;
+            cursor: pointer;
+
+            &:hover{
+                color: #fff;
+                border: solid 2px #fff;
+            }
+        }
+    }
+}
